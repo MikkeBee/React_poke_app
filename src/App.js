@@ -1,7 +1,14 @@
-import "./App.css";
+import "./index.css";
+import React from "react";
+import Layout from "./pages/Layout";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
-  return <div className="App"></div>;
+  return (
+    <BrowserRouter>
+      <Layout />
+    </BrowserRouter>
+  );
 };
 
 export default App;
