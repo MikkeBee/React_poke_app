@@ -31,7 +31,11 @@ class PokeList extends Component {
     return (
       <div className="Pokelist">
         {this.state.data.map((poke) => (
-          <PokeCard name={poke.name} key={poke.name}></PokeCard>
+          <PokeCard
+            name={poke.name}
+            key={poke.name}
+            img={poke.sprites.other.dream_world.front_default}
+          ></PokeCard>
         ))}
       </div>
     );
