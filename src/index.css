@@ -44,3 +44,21 @@ footer {
   padding-top: 2.5rem;
   padding-bottom: 4rem;
 }
+
+.Pokeist {
+  display: flex;
+}
+
+.card {
+  height: 15rem;
+  width: 15rem;
+  background-color: aqua;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: medium;
+  border-color: darkgrey;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
