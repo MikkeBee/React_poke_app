@@ -27,17 +27,17 @@ class PokeSingle extends Component {
           </div>
           {/* <p>{this.state.data.types.map((pokeType) => pokeType.type.name)}</p> */}
           <div className="pokecardDetails">
-            <p>Base XP: {this.state.data.base_experience}</p>
-            <p>Height: {this.state.data.height}</p>
-            <p>Weight: {this.state.data.weight}</p>
+            <p>BASE XP: {this.state.data.base_experience}</p>
+            <p>HEIGHT: {this.state.data.height}</p>
+            <p>WEIGHT: {this.state.data.weight}</p>
             <p>
-              Type:{" "}
+              TYPE:{" "}
               {this.state.data.types
                 ?.map((pokeType) => pokeType.type.name)
                 .join(", ")}
             </p>
             <p>
-              Abilities:{" "}
+              ABILITIES:{" "}
               {this.state.data.abilities
                 ?.map((pokeType) => pokeType.ability.name)
                 .join(", ")}
@@ -47,10 +47,18 @@ class PokeSingle extends Component {
             {this.state.data.stats?.map((item) => {
               return (
                 <p>
-                  {item.stat.name}: {item.base_stat}
+                  {item.stat.name.toUpperCase()}: {item.base_stat}
                 </p>
               );
             })}
+          </div>
+          <div className="pokecardImg2">
+            <img
+              src={
+                this.state.data.sprites?.other["official-artwork"].front_default
+              }
+              alt={this.state.data.name}
+            />
           </div>
         </div>
       </div>

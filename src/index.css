@@ -54,6 +54,12 @@ header ul li a {
   color: rgb(255, 255, 0);
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: rgb(24, 147, 184);
+  transition: 1s;
+}
+
+header ul li:hover {
+  transform: scale(110%);
+  transition: 1s;
 }
 
 main {
@@ -84,8 +90,8 @@ footer {
 
 .card {
   margin: 1rem;
-  height: 18rem;
-  width: 18rem;
+  height: 21rem;
+  width: 17rem;
   background-color: rgb(244, 244, 244);
   box-shadow: 2px 2px 5px black, 0 0 5px rgb(63, 63, 63),
     4px 4px 5px rgb(83, 83, 83);
@@ -93,17 +99,32 @@ footer {
   border-style: solid;
   border-width: thin;
   border-color: rgb(212, 212, 212);
+  padding: 1rem;
+  transition: 1s;
+}
+
+.innercard {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  transition: 1s;
+}
+
+.innercard a {
+  font-family: "Londrina Solid", cursive;
+  font-size: 1.3rem;
 }
 
 .card:hover {
   transform: scale(110%);
   transition: 1s;
+  box-shadow: 0px 0px 2px black, 0 0 1px rgb(63, 63, 63),
+    1px 1px 2px rgb(83, 83, 83);
+}
+
+.pokeNumber {
+  text-align: right;
+  font-family: "Bangers", cursive;
 }
 
 .pokeName {
@@ -135,6 +156,7 @@ h3 {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 153, 199);
   margin: 2rem;
+  text-shadow: 0 0 7px rgb(231, 231, 231), 0 0 7px rgb(231, 231, 231);
 }
 
 .pokecardCard {
@@ -142,7 +164,7 @@ h3 {
 }
 
 .pokecardImg {
-  margin: 0 6rem;
+  margin: 0 4rem;
 }
 
 .pokecardImg img {
@@ -153,8 +175,16 @@ h3 {
 .pokecardDetails {
   margin-right: 7rem;
   font-size: 1.5rem;
+  font-family: "Londrina Solid", cursive;
 }
 
 .pokecardStats {
+  margin-right: 4rem;
   font-size: 1.5rem;
+  font-family: "Londrina Solid", cursive;
+}
+
+.pokecardImg2 img {
+  width: auto;
+  height: 20rem;
 }

@@ -34,6 +34,7 @@ class PokeList extends Component {
           <PokeCard
             name={poke.name}
             key={poke.name}
+            id={poke.id}
             img={poke.sprites.other.dream_world.front_default}
           ></PokeCard>
         ))}
