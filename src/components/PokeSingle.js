@@ -27,6 +27,7 @@ class PokeSingle extends Component {
           </div>
           {/* <p>{this.state.data.types.map((pokeType) => pokeType.type.name)}</p> */}
           <div className="pokecardDetails">
+            <p>POKE NUMBER: {this.state.data.id}</p>
             <p>BASE XP: {this.state.data.base_experience}</p>
             <p>HEIGHT: {this.state.data.height}</p>
             <p>WEIGHT: {this.state.data.weight}</p>
