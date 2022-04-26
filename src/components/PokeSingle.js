@@ -18,21 +18,40 @@ class PokeSingle extends Component {
         <h3>{this.props.params.pokesingle}</h3>
         {/* use fetch to get the data, must use class component to get it
           Otherwise must use hooks. If using hooks, cannot use params. */}
-        <img
-          src={this.state.data.sprites?.other.dream_world.front_default}
-          alt={this.state.data.name}
-        />
-        {/* <p>{this.state.data.types.map((pokeType) => pokeType.type.name)}</p> */}
-        <div>
-          <p>Base XP: {this.state.data.base_experience}</p>
-          <p>Height: {this.state.data.height}</p>
-          <p>Weight: {this.state.data.weight}</p>
-          <p>
-            Type:{" "}
-            {this.state.data.types
-              ?.map((pokeType) => pokeType.type.name)
-              .join(", ")}
-          </p>
+        <div className="pokecardCard">
+          <div className="pokecardImg">
+            <img
+              src={this.state.data.sprites?.other.dream_world.front_default}
+              alt={this.state.data.name}
+            />
+          </div>
+          {/* <p>{this.state.data.types.map((pokeType) => pokeType.type.name)}</p> */}
+          <div className="pokecardDetails">
+            <p>Base XP: {this.state.data.base_experience}</p>
+            <p>Height: {this.state.data.height}</p>
+            <p>Weight: {this.state.data.weight}</p>
+            <p>
+              Type:{" "}
+              {this.state.data.types
+                ?.map((pokeType) => pokeType.type.name)
+                .join(", ")}
+            </p>
+            <p>
+              Abilities:{" "}
+              {this.state.data.abilities
+                ?.map((pokeType) => pokeType.ability.name)
+                .join(", ")}
+            </p>
+          </div>
+          <div className="pokecardStats">
+            {this.state.data.stats?.map((item) => {
+              return (
+                <p>
+                  {item.stat.name}: {item.base_stat}
+                </p>
+              );
+            })}
+          </div>
         </div>
       </div>
     );

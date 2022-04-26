@@ -62,12 +62,18 @@ main {
 }
 
 footer {
+  background-image: url("./assets/images/pokebackground.webp");
+  /* background-position: center center; */
+  background-position: 100% 77%;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   justify-content: center;
   background-color: rgb(229, 255, 0);
   padding-left: 2rem;
   padding-top: 2.5rem;
-  padding-bottom: 4rem;
+  padding-bottom: 2rem;
+  font-family: "Londrina Solid", cursive;
 }
 
 .Pokelist {
@@ -122,9 +128,33 @@ footer img {
 }
 
 h3 {
+  text-align: center;
   font-family: "Bangers", cursive;
-  font-size: 3rem;
+  font-size: 4rem;
   color: yellow;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: rgb(0, 153, 199);
+  margin: 2rem;
+}
+
+.pokecardCard {
+  display: flex;
+}
+
+.pokecardImg {
+  margin: 0 6rem;
+}
+
+.pokecardImg img {
+  width: auto;
+  height: 20rem;
+}
+
+.pokecardDetails {
+  margin-right: 7rem;
+  font-size: 1.5rem;
+}
+
+.pokecardStats {
+  font-size: 1.5rem;
 }
